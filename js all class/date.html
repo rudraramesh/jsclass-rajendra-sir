@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Mathod</title>
+</head>
+<body>
+    <script>
+        const d = new Date();
+        document.write(`${d} <br>`);
+        //👉👉 to get only year use getFullYear() ->2021
+        document.write(`${d.getFullYear()} <br>`);
+
+        //👉 to get Month use getMonth()-> 0-11
+        document.write(`${d.getMonth()}<br>`);
+        
+        // 👉to get date use getDate() -> 1-31
+        document.write(`${d.getDate()} <br>`);
+
+        //👉to get day use getDay() -> 0-6
+        document.write(`${d.getDay()} <br>`);
+
+        //👉to get hour use getHours() -> 0-23
+        document.write(`${d.getHours()} <br>`);
+
+        //👉 to get minute use getMinutes() ->0-59
+        document.write(`${d.getMinutes()} <br>`);
+
+        //👉to get seconds use getSeconds() ->0-59
+        document.write(`${d.getSeconds()}<br>`);
+
+        //👉to get millisecond use getMillisecond() -> 0-999
+        document.write(`${d.getMilliseconds()} <br>`);
+    </script>
+</body>
+</html>

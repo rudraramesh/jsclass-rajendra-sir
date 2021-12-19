@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical Operator</title>
+</head>
+
+<body>
+    <h1>inspect and show result console.log</h1>
+    <input type="text" name="click" id="ages" placeholder="Write Your Age">
+    <button onclick="button()" id="btn1" name="button">Show Result</button>
+    <script>
+        function button() {
+            var age = document.getElementById("ages").value;
+            alert('click OK, inspect and go console.log your result is there your age is:' + age + ' your age is conform');
+            // let age=111;
+
+            if (age >= 18 && age <= 40) {
+                console.log('you are young man');
+            }
+            else if (age >= 40 && age <= 100) {
+                console.log('you are old man ');
+            }
+            else if (age <= 18 && age > 0) {
+                console.log('you are child');
+            }
+            else {
+                console.log('sorry out of age not allowed');
+            }
+        }
+
+        document.write('<br><br>');
+
+        let a = 9;
+        let b = 99;
+        if (a <= 10 || b >= 100) {
+            document.write(`this is right`);
+        }
+        else {
+            document.write('this is wrong');
+        }
+    </script>
+</body>
+
+</html>

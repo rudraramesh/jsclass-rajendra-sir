@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    <script>
+        const text="welcome to dursikshya to read programming language";
+        document.write(`${text} <br>`);
+        //to count the length of a string
+        document.write(`total length of:${text.length} <br>`);
+        //to find the position of string in a string
+        document.write(`length of to is:${text.indexOf('to')} <br>`);
+        //to find the last position of repeated string use lastindexOf
+        document.write(`last length of 'to'is ${text.lastIndexOf('to')}<br>`);
+        //replace
+        document.write(`read to learn: - ${text.replace('read','learn')} <br>`);
+        //replace globally
+        document.write(`${text.replace(/to/g,'tooo')}<br>`);
+        //to uppercase
+        document.write(`toUpperCase is:${text.toUpperCase()}<br>`);
+        //to lowercase
+        document.write(`To Lowercase:${text.toLowerCase()}<br>`);
+        //sustring ->small part of a string
+
+        //slice(start,end)->slice(0,20)
+        //substring(start,end)->substring(0,20)
+        //substr(start,length)->substr(5,25)
+
+        document.write(`${text.slice(0,21)}.....<br>`);
+        document.write(`${text.substring(5,30)}.....<br>`);
+        document.write(`${text.substr(5,30)}.....<br>`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async/await</title>
+</head>
+<body>
+    <div></div>
+
+    <script>
+        let news=[
+            {newsTitle:"First Title",newsContent:"hellow world"},
+            {newsTitle:"Second Title",newsCoutent:"javascript class"}
+        ]
+
+        function showNews(){
+            setTimeout(()=>{
+                let result=""
+                news.forEach((post)=>{
+                    result+=`<li>${post.newsTitle}</li>`
+                })
+        document.querySelector('div').innerHTML=result
+
+        },2000)
+    }
+
+    function addNews(newsdata){
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                news.push(newsdata)
+
+                const error = false
+                if(!error){
+                    resolve()
+                }
+                else{
+                    reject('Error:Something went wrong')
+                }
+            },3000)
+        })
+    }
+
+
+    
+    
+    async function demoFunction(){
+        await addNews({newsTitle:"Third Title",newsContent:"this is add from push method"})
+        showNews()
+    }
+
+
+        demoFunction()
+        </script>
+</body>
+</html>

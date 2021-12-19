@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Method</title>
+</head>
+<body>
+    <script>
+        //toFixed()->to decide how many number to be printed after decimal points
+
+        const x=25.43672;
+        document.write(`${x.toFixed(2)} <br>`);
+        document.write(`${x.toFixed()}<br>`);
+
+        //toPrecision() ->to decide how many numbers to be printed as a whole
+        document.write(`${x.toPrecision(3)}<br>`);
+
+        // toExponential()->
+        document.write(`${x.toExponential(2)}<br>`);
+
+        //to convert string number 
+        //i>number()
+        //ii>parseFloat()-> it includes decimal no as wellcas whole number
+        //iii>parseInt()->it include only whole number
+
+        const y=Number("25");
+        document.write(typeof(y));
+        document.write('<br>');
+
+        const z=parseInt("30.1234");
+        document.write(`${z}<br>`);
+
+        const a=Number("Hello World");
+        document.write(typeof(a));
+        document.write('<br>');
+        document.write(`${a}`);
+        document.write('<br>');
+
+        
+        //concatenate
+        const b="25";
+        const c="25";
+        const d=b+c;
+        document.write(`${d}`);
+    </script>
+</body>
+</html>

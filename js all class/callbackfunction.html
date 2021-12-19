@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Function</title>
+</head>
+<body>
+    
+    <div></div>
+    <script>
+        let news=[
+            {newsTitle:"First Title",newsContent:"hellow world"},
+            {newsTitle:"Second Title",newsCoutent:"javascript class"}
+        ]
+        function showNews(){
+            setTimeout(()=>{
+                let result=""
+                news.forEach((post)=>{
+                    result+=`<li>${post.newsTitle}</li>`
+                })
+        document.querySelector('div').innerHTML=result
+
+        },2000)
+    }
+
+        // call the function showNews()
+
+        // showNews()
+
+
+        //     function addNews(newsdata){
+        //         setTimeout(()=>{
+        //             news.push(newsdata)
+        //         },3000)
+        //     }
+        // //  call the function add news
+        // addNews({newsTitle:"third title",newsContent:"this is add from push method"})
+
+
+
+
+        function addNews(newsdata,callback){
+            setTimeout(()=>{
+                news.push(newsdata)
+                //call the callback after adding news 
+                callback()
+            },3000)
+        }
+            // call the function addNews() with call back function
+        addNews({newsTitle:"third title",newsContent:"this is add from push method"},showNews)
+            
+    </script>
+
+</body>
+</html>
