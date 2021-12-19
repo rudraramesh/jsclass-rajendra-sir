@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html clss</title>
+</head>
+<input type="text" name="age" id="myage" placeholder="Write Your Age">  <br><br>
+<button name="button" onclick="button()" id="myage">Click me </button>
+
+<script>
+    function button(){
+        age =document.getElementById("myage").value;
+        // alert('your age is '+ age);
+
+    
+    // let age = 101;
+    if(age>=18 && age<=40){
+        document.write("you are young man");
+        
+    }
+    else if(age>0 && age<18){
+        document.write("you are child ");
+    }else if(age>40 && age<=100){
+        document.write("you are old man");
+    }else{
+        document.write("age is not allowed");
+    }
+}
+</script>
+    
+    </body>
+    </html>
